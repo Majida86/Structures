@@ -1,0 +1,41 @@
+<h1>Structures ngIf & ngFor</h1>
+
+<h2>ngIf</h2>
+
+<div *ngIf="isActive">isActive est TRUE</div>
+
+<div>Bla bla bla</div>
+
+<button
+type="button"
+(click)="changeIsActive()"
+>
+<ng-container *ngIf="isActive; else btnOn">Off</ng-container>
+<ng-template #btnOn>On</ng-template>
+
+</button>
+
+<hr>
+
+<h2>ngFor</h2>
+
+<div *ngFor="let item of [].constructor(10); let i = index">
+  xxx {{ item }} yyy {{ i }} zzz
+</div>
+
+<ul>
+  <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+</ul>
+
+<hr>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
